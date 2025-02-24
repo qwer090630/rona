@@ -1154,6 +1154,7 @@ async def 도움말(ctx):
     embed.set_footer(text="로나랜드 2세 | 문의: 문의채널")
 
     await ctx.send(embed=embed)
-
-# 봇 실행
+if __name__ == "__main__":
+    import asyncio
+    asyncio.run(main())  # main() 함수가 비동기라면 이렇게 실행
 bot.run(config["token"])
