@@ -3,7 +3,7 @@ import nextcord
 from nextcord.ext import commands
 import random
 import sqlite3
-
+import os
 import toss
 
 
@@ -1154,7 +1154,4 @@ async def 도움말(ctx):
     embed.set_footer(text="로나랜드 2세 | 문의: 문의채널")
 
     await ctx.send(embed=embed)
-if __name__ == "__main__":
-    import asyncio
-    asyncio.run(main())  # main() 함수가 비동기라면 이렇게 실행
-bot.run(config["token"])
+TOKEN = os.getenv('DISCORD_BOT_TOKEN')
